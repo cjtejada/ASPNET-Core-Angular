@@ -6,9 +6,9 @@ import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 export const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomeComponent }, //public paths
     {
-        path: '',
+        path: '', //all paths in this array element are protected witha guard
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
