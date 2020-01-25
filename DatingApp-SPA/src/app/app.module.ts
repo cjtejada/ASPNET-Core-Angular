@@ -27,6 +27,7 @@ import { NgxGalleryModule } from 'ngx-gallery';
 import { extend } from 'webdriver-js-extender';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberEditlResolver } from './_resolvers/member-edit.resolver';
+import { ListsResolver } from './_resolvers/lists.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
@@ -90,6 +91,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     MemberListResolver,
     MemberEditlResolver,
     PreventUnsavedChanges,
+    ListsResolver,
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
   ],
   bootstrap: [AppComponent]
